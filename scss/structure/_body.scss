@@ -1,0 +1,332 @@
+.main{
+
+    .main__banner{
+        width: 100%;
+        padding: 80px 20px;
+        text-align: center;
+        background: 
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            url("../img/banner_hound_express.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 50%;
+        color:$whiteColor;
+        box-sizing: border-box;
+
+        h1{
+            @extend %h1_blue_style;
+        }
+        p{
+            font-weight: 500;
+            margin-top: 20px;
+            font-size: px-to-rem(24);
+        }
+    }
+
+    .form{
+        width: 100%;
+        padding: 2% 12%;
+        background-color: $mainColorNavy;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+        @include phone_adjustments{
+            padding: 1% 6%;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        @include media_adjustments{
+            padding: 2% 8%;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 30px;
+        }
+
+        .form__structure{
+            width: 100%;
+            padding: 60px 20px;
+            background-color: $whiteColor;
+            font-size: px-to-rem(20);
+            gap: 70px;
+            @include media_adjustments{
+                padding: 40px 12px;
+            }
+            @include phone_adjustments{
+                padding: 20px 6px;
+            }
+            h2{
+                @extend %h2_blue_style;
+                padding: 18px 10px;
+                @include phone_adjustments{
+                    font-size: px-to-rem(28);
+                }
+            }
+            fieldset{
+                border: none;
+                padding: 30px 60px;
+                .form__inputs{
+                    @include flexbox_row(null,center);
+                    margin-bottom: 16px;
+                    @include phone_adjustments{
+                        margin-bottom: 8px;
+                    }
+
+                    label{
+                        width: 280px;
+                        font-size: px-to-rem(22);
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        @include phone_adjustments{
+                            font-size: px-to-rem(16);
+                        }
+                    }
+                    input, select{
+                        flex-grow: 1;
+                        font-size: px-to-rem(18);
+                        text-transform: uppercase;
+                        border: 3px solid $mainColorNavy;
+                        color: $whiteColor;
+                        background-color: $secondaryColorBlue;
+                        font-weight: 600;
+                        @include phone_adjustments{
+                            font-size: px-to-rem(16);
+                        }
+                    }
+                    input[type="submit"]{
+                        font-size: px-to-rem(24);
+                        font-weight: 700;
+                        transition: background-color 0.4s ease-in-out, 
+                            $transition_ease;
+                        &:hover{
+                            border: 3px solid $whiteColor;
+                            color:$secondaryColorBlue;
+                            background-color:$mainColorNavy;
+                        }
+                    }
+
+                    &:last-child {
+                        @include flexbox_column(none,center);
+                        padding-top: 40px;
+                            
+                    }
+
+                }
+
+            }
+        }
+        .form__decoration{
+            padding: 2% 12%;
+            @include flexbox_row(center,center);
+            img{
+                width: 400px;
+            }
+            @include phone_adjustments{
+                display: none;
+            }
+            @include media_adjustments{
+                display: none;
+            }
+        }
+    }
+
+    .status{
+        width: 100%;
+        box-sizing: border-box;
+        @include flexbox_column(space-around,center);  
+        padding:4% 10%;
+        background: linear-gradient(135deg, $whiteColor 50%, $secondaryColorBlue 50%);
+        gap:3%;
+        @include phone_adjustments{
+            background: $secondaryColorBlue;
+            padding:2% 5%;
+            gap:1%;
+        }
+        .status__information{
+            @include flexbox_column(none, center);
+            width: 100%;
+            max-width: 1200px;
+            margin: 2% 0;
+            padding: 2rem;
+            background-color: $whiteColor;
+            border-radius: 70px;
+
+            @include phone_adjustments{
+                max-width: 900px;
+                border-radius: 35px;
+            }
+
+            > h3{
+                @extend %h3_blue_style;
+                flex: 1;
+                margin: 0;
+                @include phone_adjustments{
+                    font-size: px-to-rem(28);
+                }
+            }
+            > p{
+                @extend %p_navy_style;
+                flex: 1;
+                margin: 0;
+                >b{
+                    @extend %b_blue_style;
+                    @include phone_adjustments{
+                        font-size: px-to-rem(24);
+                    }
+                }
+                @include phone_adjustments{
+                    font-size: px-to-rem(20);
+                }
+            }
+        }
+    }
+    .guides{
+        @include flexbox_column(center,stretch);
+        width: 100%;
+        padding: 3% 6%;
+        background-color: $mainColorNavy;
+        box-sizing: border-box;
+        @include phone_adjustments{
+            padding: 2%;
+        }
+        .guides__title{
+            h3{
+                @extend %h3_blue_style;
+                flex: 1;
+                margin: 0;
+                text-align: center;
+                padding:24px;
+                @include phone_adjustments{
+                    font-size: px-to-rem(28);
+                }
+            }
+        }
+        .guides__table{
+            width: 100%;
+            table-layout: fixed;
+            background-color: $whiteColor;
+            border-collapse: collapse;
+            .guides__thead{
+                tr{
+                    @extend %format__tr__table;
+                    th{
+                        color:$mainColorNavy;
+                        background-color: $whiteColor;
+                        height: 6rem;
+                        text-align: center;
+                        vertical-align: middle;
+                        padding: 0.3rem;
+                        strong{
+                            font-size: px-to-rem(20);
+                            @include phone_adjustments{
+                                font-size: px-to-rem(12);
+                            }
+                            @include media_adjustments{
+                                font-size: px-to-rem(16);
+                            }
+                        }
+                        @include phone_adjustments{
+                            height: 3rem;
+                        }
+                    }
+                    @include phone_adjustments{
+                        height: 3rem;
+                    }
+                }
+            }
+            .guides__tbody{
+                .guides__row{
+                    @extend %format__tr__table;
+                    td{
+                        font-size: px-to-rem(20);
+                        font-weight: 500;
+                        @include phone_adjustments{
+                            font-size: px-to-rem(12);
+                        }
+                        @include media_adjustments{
+                            font-size: px-to-rem(16);
+                        }
+                    }
+                    &:nth-child(2n-1){
+                        color:$whiteColor;
+                        background-color: $secondaryColorBlue;
+                    }
+                    &:nth-child(2n){
+                        color:$mainColorNavy;
+                        background-color: $whiteColor;
+                    }
+                    .guides__buttons{
+                        @include flexbox_column(center,center);
+                        padding: 6px 20px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        flex:1;
+                        gap:4px;
+                        >button{
+                            @include flexbox_row(space-evenly,center);
+                            background-color: $mainColorNavy;
+                            color:$whiteColor;
+                            width: 100%;
+                            padding: 12px;
+                            border: 2px solid $blackColor;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            transition: $transition_ease;
+                            img{
+                                width: 20px;
+                                height: 20px;
+                                filter: brightness(0) invert(1);
+                                display: none;
+                                @include phone_adjustments{
+                                    display: block;
+                                }
+                                @include media_adjustments{
+                                    display: block;
+                                }
+                                
+                            }
+                            p{
+                                font-size: px-to-rem(16);
+                                font-weight: bolder;
+                                &:hover{
+                                    color:$mainColorNavy;
+                                }
+                                @include phone_adjustments{
+                                    display: none;
+                                }
+                                @include media_adjustments{
+                                    display: none;
+                                }
+                            }
+                            &:hover{
+                                background-color: $secondaryColorBlue;
+                                color:$mainColorNavy;
+                            }
+                            @include phone_adjustments{
+                                @include flexbox_column(center,center);
+                                padding: 6px;
+                                gap:2px;
+                                font-size: px-to-rem(12);
+                            }
+                        }
+                        @include phone_adjustments{
+                            @include flexbox_row(none,stretch);
+                            padding: 4px 10px;
+                            gap:2px;
+                        }
+                        @include media_adjustments{
+                            @include flexbox_row(none,stretch);
+                        }
+                    }
+                    @include phone_adjustments{
+                        height: 3rem;
+                        font-size: px-to-rem(16);
+                    }
+                }
+            }
+        }
+    }
+
+}

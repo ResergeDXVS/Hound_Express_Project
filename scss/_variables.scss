@@ -1,0 +1,63 @@
+$mainColorNavy: #091E3F;
+$secondaryColorBlue: #6AC6DE;
+$whiteColor: #FFFFFF;
+$blackColor: #000000;
+
+$fontFamily: "Open Sans", Arial, Helvetica, sans-serif;
+
+$transition_ease: background-color 0.3s ease;
+
+%link_white_style{
+    text-decoration: none;
+    color: $whiteColor;
+}
+
+%h1_blue_style{
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: $secondaryColorBlue;
+}
+
+%h2_blue_style{
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: $mainColorNavy;
+    text-align: center;
+}
+
+%h3_blue_style{
+    font-size: 3rem;
+    font-weight: 800;
+    color: $secondaryColorBlue;
+}
+
+%p_navy_style{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $mainColorNavy;
+}
+
+%b_blue_style{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: $secondaryColorBlue;
+}
+
+%a_footer_style{
+    font-weight: 500;
+    color: $whiteColor;
+    text-decoration: none;
+}
+
+%p_white_style{
+    font-weight: 500;
+    color: $mainColorNavy;
+}
+
+%format__tr__table{
+    height: 5rem;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.3rem;
+    font-size: px-to-rem(20);
+}

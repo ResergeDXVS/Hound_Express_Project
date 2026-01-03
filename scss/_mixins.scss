@@ -1,0 +1,33 @@
+@mixin flexbox_row($justify, $align) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexbox_column($justify, $align){
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@function px-to-rem($px, $base: 16) {
+    @return calc($px / $base) * 1rem;
+}
+
+@function light_text($color, $amount: 15%) {
+    @return lighten($color, $amount);
+}
+
+@mixin phone_adjustments{
+    @media screen and (max-width:750px){
+        @content;
+    }
+}
+
+@mixin media_adjustments{
+    @media screen and (max-width:1200px) and (min-width:750px){
+        @content;
+    }
+}

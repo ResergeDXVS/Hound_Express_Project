@@ -1,0 +1,64 @@
+*{
+    font-family: $fontFamily;
+    font-size: px-to-rem(16);
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.header{
+    @include flexbox_row(space-between, center);
+    width: auto;
+    height: 120px;
+    padding: 0 20px;
+    gap: 14px;
+    background-color: $mainColorNavy;
+    box-sizing: border-box;
+
+    .header__logo{
+        width: 240px;
+    }
+    .header__burger{
+        width: 50px;
+        display: none;
+        &:hover{
+            transform: scale(1.1);
+        }
+        @include phone_adjustments{
+            display: block;
+        }
+    }
+    > b{
+        font-size: px-to-rem(14);
+        transition: $transition_ease;
+        
+        &:hover{
+            transform: scale(1.1);
+        }
+        a{
+            @extend %link_white_style;
+            
+            &:hover{
+                color: light_text($secondaryColorBlue);
+            }
+            @include media_adjustments{
+                font-size: px-to-rem(12);
+            }
+        }
+        @include media_adjustments{
+            text-align: center;
+        }
+        @include phone_adjustments{
+            display: none;
+            
+        }
+    }
+
+    @include phone_adjustments{
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    
+}

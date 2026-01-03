@@ -1,0 +1,97 @@
+.footer{
+    background-color: $secondaryColorBlue;
+    display: grid;
+    grid-template-areas:
+        "copyright copyright"
+        "policy policy"
+        "contacts redes";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding: 24px;
+    gap: 14px;
+
+    @include phone_adjustments{
+        display: grid;
+        grid-template-areas:
+            "copyright"
+            "policy"
+            "contacts"
+            "redes";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        padding: 12px 2px;
+        gap: 4px;
+    }
+    .footer__copyrights{
+        grid-area: copyright;
+        > p{
+            font-size: px-to-rem(14);
+            font-weight: 300;
+            color: $mainColorNavy;
+            text-align: center;
+            @include phone_adjustments{
+                font-size: px-to-rem(10);
+            }
+        }
+    }
+    .footer__policy{
+        grid-area: policy;
+        padding: 14px 10px;
+        @include flexbox_row(center,center);
+        gap: 120px;
+        flex-wrap: nowrap;
+        a{
+            @extend %a_footer_style;
+            @include phone_adjustments{
+                font-size: px-to-rem(10);
+            }
+        }
+        @include phone_adjustments{
+            gap:60px;
+        }
+    }
+    .footer__contacts{
+        grid-area: contacts;
+        @include flexbox_column(space-around,flex-start);
+        padding: 4px 60px;
+        @include phone_adjustments{
+            @include flexbox_column(center, center);
+        }
+        p{
+            @extend %p_white_style;
+            > a{
+                @extend %a_footer_style;
+                @include phone_adjustments{
+                    font-size: px-to-rem(10);
+                }
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(10);
+            }
+        }
+    }
+    .footer__list{
+        grid-area: redes;
+        @include flexbox_column(space-between,flex-end);
+        padding: 4px 120px;
+        gap:12px;
+        .footer__network{
+            @include flexbox_row(flex-end,center);
+            gap:12px;
+            @extend %a_footer_style;
+            img{
+                width: 30px;
+            }
+            p{
+                display: block;
+                font-size: px-to-rem(16);
+                @include phone_adjustments{
+                    font-size: px-to-rem(10);
+                }
+            }
+        }
+        @include phone_adjustments{
+            @include flexbox_row(space-between,flex-start);
+        }
+    }
+}

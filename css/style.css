@@ -1,0 +1,391 @@
+*{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*HEADER*/
+header{
+    width: auto;
+    height: 120px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    background-color: #091E3F;
+    box-sizing: border-box;
+}
+
+header b{
+    font-size: 0.8rem;
+}
+
+header b a{ 
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+}
+
+.logo{
+    width: 240px;
+}
+
+/*BANNER */
+.banner{
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url("../img/banner_hound_express.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    color:#FFFFFF;
+    box-sizing: border-box;
+}
+
+.banner h1{
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: #6AC6DE;
+}
+
+.banner p{
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+/*FORMULARIO*/
+.form{
+    width: 100%;
+    padding: 2% 12%;
+    background-color: #091E3F;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 40px;
+}
+
+.formulario{
+    width: 100%;
+    
+    padding: 60px 20px;
+    background-color: #FFFFFF;
+    font-size: 1.2rem;
+    gap: 70px;
+    
+}
+
+.formulario h2{
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #091E3F;
+    padding: 18px 10px;
+    text-align: center;
+    
+}
+
+
+fieldset {
+    border: none;
+    padding: 30px 60px;
+}
+
+.formulario-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.formulario-group label {
+    width: 280px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.formulario-group input,
+.formulario-group select {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 3px solid #091E3F;
+    color: #FFFFFF;
+    background-color: #6AC6DE;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.formulario-group:last-child {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    
+}
+
+input[type="submit"]{
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: background-color 0.4s ease-in-out, 
+        transform 0.4s ease;
+}
+
+
+.form_image{
+    padding: 2% 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_image img{
+    width: 100%;
+}
+
+
+
+.estado_general{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;    
+    padding:4% 10%;
+    background: linear-gradient(135deg, #ffffff 50%, #6AC6DE 50%);
+    gap:3%;
+}
+
+.estado_general .estado_datos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2% 0;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border-radius: 70px;
+    text-align: justify;
+    align-items: center;
+}
+.estado_general .estado_datos h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #6AC6DE;
+    flex: 1;
+    margin: 0;
+}
+
+
+.estado_general .estado_datos p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #091E3F;
+    flex: 1;
+    margin: 0;
+}
+
+.estado_general .estado_datos p b{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #6AC6DE;
+}
+
+.guias{
+    width: 100%;
+    padding: 3% 6%;
+    background-color: #091E3F;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.guias h3{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.guias table{
+    width: 100%;
+    table-layout: fixed;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+}
+
+.guias table th{
+    color:#091E3F;
+    background-color: #FFFFFF;
+    height: 6rem;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.3rem;
+    
+}
+
+.guias table tr{
+    height: 5rem;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.3rem;
+    font-size: 1.4rem;
+}
+
+.guias table strong{
+    font-size: 1.4rem;
+}
+.guias table td{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.guias table tr:nth-child(2n-1){
+    color:#FFFFFF;
+    background-color: #6AC6DE;
+}
+
+.guias table tr:nth-child(2n){
+    color:#091E3F;
+    background-color: #FFFFFF;
+}
+
+.guias table tr .cell_buttons{
+    padding: 6px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex:1;
+    gap:4px;
+}
+
+.guias table tr .cell_buttons .update_status,
+.guias table tr .cell_buttons .historical_guide{
+    background-color: #091E3F;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    background-color: #091E3F;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+footer{
+    background-color: #6AC6DE;
+    display: grid;
+    grid-template-areas:
+        "copyright copyright"
+        "policy policy"
+        "contacts redes";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding: 24px;
+    gap: 14px;
+}
+
+footer > p{
+    grid-area: copyright;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #091E3F;
+    text-align: center;
+}
+
+footer .policy{
+    padding: 14px 10px;
+    grid-area: policy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: nowrap;
+}
+
+footer .policy a{
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+footer .contacts{
+    padding: 4px 60px;
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+footer .contacts p{
+    font-weight: 500;
+    color: #091E3F;
+}
+
+footer .contacts p > a{
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+footer .redes{
+    padding: 4px 120px;
+    grid-area: redes;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap:12px;
+
+}
+
+footer .redes a{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center; 
+    gap: 12px;            
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer .redes a img{
+    width: 30px;
+}
+
+footer .redes a .red_social{
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+@media (hover: hover){
+    input[type="submit"]:hover{
+        border: 3px solid #FFFFFF;
+        color:#6AC6DE;
+        background-color:#091E3F ;
+    }
+    .guias table tr .cell_buttons .update_status:hover,
+    .guias table tr .cell_buttons .historical_guide:hover{ 
+        background-color: #6AC6DE;
+        color:#091E3F;
+    }
+    
+}

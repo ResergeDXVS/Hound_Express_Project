@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>Hound Express</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="img/logoAzulBlancoHE.png" alt="Logo">
+        <b><a href="#">Inicio</a></b>
+        <b><a href="#form">Registro de Gu&iacute;as</a></b>
+        <b><a href="#estado_general">Estado General</a></b>
+        <b><a href="#guias">Lista de Gu&iacute;as</a></b>
+        <b><a href="#">Buscar Gu&iacute;as</a></b>
+        <b><a href="#">Historial de Gu&iacute;as</a></b>
+        <img src="img/icons/burger-menu.svg" class="header__burger">
+    </header>
+    <main class="main">
+        <section class="main__banner">
+            <h1>Hound Express</h1>
+            <p>El mensajero fiel</p>
+        </section>
+
+        <section  class="form">
+            <form class="form__structure">
+                <h2>Registro de gu&iacute;as</h2>
+                <fieldset>
+                    <div class="form__inputs">
+                        <label for="id_guide">N&uacute;mero de gu&iacute;a&colon;</label>
+                        <input id="id_guide" name="id_guide" type="number" required>
+                    </div>
+
+                    <div class="form__inputs">
+                        <label for="origin">Origen&colon;</label>
+                        <input id="origin" name="origin" type="text" required>
+                    </div>
+
+                    <div class="form__inputs">
+                        <label for="destination">Destino&colon;</label>
+                        <input id="destination" name="destination" type="text" required>
+                    </div>
+
+                    <div class="form__inputs">
+                        <label for="recipient">Destinatario&colon;</label>
+                        <input id="recipient" name="recipient" type="text" required>
+                    </div>
+
+                    <div class="form__inputs">
+                        <label for="date">Fecha de creaci&oacute;n&colon;</label>
+                        <input id="date" name="date" type="text" required>
+                    </div>
+
+                    <div class="form__inputs">
+                        <label for="state">Selecciona el estado inicial</label>
+                        <select id="state" name="state" required>
+                            <option value="pending">Pendiente</option>
+                            <option value="intransit">En tr&aacute;nsito</option>
+                            <option value="delivered">Entregado</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form__inputs">
+                        <input id="submit" type="submit" value="Enviar">
+                    </div>
+            </fieldset>
+            </form>
+            <article class="form__decoration">
+                <img src="img/icons/clipboard.png" alt="Registro">
+            </article>
+        </section>
+        <section class="status">
+            <div class="status__information">
+                <h3>Estado general de Gu&iacute;as</h3>
+            </div>
+            <div class="status__information">
+                <p>N&uacute;mero total de gu&iacute;as activas&colon; <b>15,320</b></p>
+            </div>
+            <div class="status__information">
+                <p>Gu&iacute;as en tr&aacute;nsito&colon; <b>9,565</b></p>
+            </div>
+            <div class="status__information">
+                <p>Gu&iacute;as entregadas&colon; <b>5,755</b></p>
+            </div>
+        </section>
+
+        <section class="guides">
+            <div class="guides__title">
+                <h3>Listado de Gu&iacute;as</h3>
+            </div>
+            <table class="guides__table">
+                <thead class="guides__thead">
+                    <tr>
+                        <th><strong>N&uacute;mero de gu&iacute;a</strong></th>
+                        <th><strong>Estado actual</strong></th>
+                        <th><strong>Origen</strong></th>
+                        <th><strong>Destino</strong></th>
+                        <th><strong>Fecha de ultima actualizaci&oacute;n</strong></th>
+                        <th><strong>Acciones</strong></th>
+                    </tr>
+                </thead>
+                <tbody class="guides__tbody">
+                    <tr class="guides__row">
+                        <td>7894561230</td>
+                        <td>En tr&aacute;nsito</td>
+                        <td>Ciudad de M&eacute;xico, CDMX</td>
+                        <td>Guadalajara, Jalisco</td>
+                        <td>08/06/2025</td>
+                        <td class="guides__buttons">
+                            <button class="guides__update" title="Actualizar registro">
+                                <p>Actualizar Estado</p>
+                                <img src="img/icons/update.svg">
+                            </button>
+                            <button class="guides__historical" title="Historial de registro">
+                                <p>Ver Historial</p>
+                                <img src="img/icons/historical.svg">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="guides__row">
+                        <td>4561237890</td>
+                        <td>Entregado</td>
+                        <td>Monterrey, Nuevo Le&oacute;n</td>
+                        <td>Quer&eacute;taro, Qro.</td>
+                        <td>07/06/2025</td>
+                        <td class="guides__buttons">
+                            <button class="guides__update" title="Actualizar registro">
+                                <p>Actualizar Estado</p>
+                                <img src="img/icons/update.svg">
+                            </button>
+                            <button class="guides__historical" title="Historial de registro">
+                                <p>Ver Historial</p>
+                                <img src="img/icons/historical.svg">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="guides__row">
+                        <td>3216549870</td>
+                        <td>Pendiente</td>
+                        <td>Puebla, Puebla</td>
+                        <td>Canc&uacute;n, Quintana Roo</td>
+                        <td>09/06/2025</td>
+                        <td class="guides__buttons">
+                            <button class="guides__update" title="Actualizar registro">
+                                <p>Actualizar Estado</p>
+                                <img src="img/icons/update.svg">
+                            </button>
+                            <button class="guides__historical" title="Historial de registro">
+                                <p>Ver Historial</p>
+                                <img src="img/icons/historical.svg">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="guides__row">
+                        <td>8745123690</td>
+                        <td>Pendiente</td>
+                        <td>Tijuana, Baja California</td>
+                        <td>Le&oacute;n, Guanajuato</td>
+                        <td>09/06/2025</td>
+                        <td class="guides__buttons">
+                            <button class="guides__update" title="Actualizar registro">
+                                <p>Actualizar Estado</p>
+                                <img src="img/icons/update.svg">
+                            </button>
+                            <button class="guides__historical" title="Historial de registro">
+                                <p>Ver Historial</p>
+                                <img src="img/icons/historical.svg">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copyrights">
+            <p>&copy; 2025 Hound Express. Todos los derechos reservados.</p>
+        </div>
+        <section class="footer__policy">
+            <a href="">Pol&iacute;tica de Privacidad</a>
+            <a href="">T&eacute;rminos y Condiciones</a>
+            <a href="">Aviso Legal</a>
+        </section>
+        <section class="footer__contacts">
+            <p>Contacto: <a href="mailto:houndexpresscontact@houndexp.com">houndexpresscontact@houndexp.com</a></p>
+            <p>Tel: <a href="tel:+525555555555">+52 55 5555 5555</a></p>
+        </section>
+        <section class="footer__list">
+            <a href="" class="footer__network">
+                <img src="img/icons/facebook.svg" alt="Facebook">
+                <p>Facebook</p>
+            </a>
+            <a href="" class="footer__network">
+                <img src="img/icons/twitterx.svg" alt="Twitter (X)">
+                <p>Twitter (X)</p>
+            </a>
+            <a href="" class="footer__network">
+                <img src="img/icons/instagram.svg" alt="Instagram">
+                <p>Instagram</p>
+            </a>
+        </section>
+    </footer>
+</body>
+</html>
