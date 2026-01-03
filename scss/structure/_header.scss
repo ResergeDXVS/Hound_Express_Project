@@ -23,7 +23,7 @@ html {
         width: 50px;
         display: none;
         &:hover{
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
         @include phone_adjustments{
             display: block;

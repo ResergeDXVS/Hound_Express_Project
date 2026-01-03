@@ -25,7 +25,7 @@
 
     .form{
         width: 100%;
-        padding: 2% 12%;
+        padding: 3% 12%;
         background-color: $mainColorNavy;
         box-sizing: border-box;
         display: grid;
@@ -33,13 +33,13 @@
         grid-template-rows: auto;
         gap: 40px;
         @include phone_adjustments{
-            padding: 1% 6%;
+            padding: 3% 6%;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             gap: 20px;
         }
         @include media_adjustments{
-            padding: 2% 8%;
+            padding: 3% 8%;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             gap: 30px;
@@ -141,7 +141,7 @@
         gap:3%;
         @include phone_adjustments{
             background: $secondaryColorBlue;
-            padding:2% 5%;
+            padding:2% 4%;
             gap:1%;
         }
         .status__information{

@@ -27,7 +27,7 @@
 }
 
 @mixin media_adjustments{
-    @media screen and (max-width:1200px) and (min-width:750px){
+    @media screen and (max-width:1250px) and (min-width:750px){
         @content;
     }
 }
