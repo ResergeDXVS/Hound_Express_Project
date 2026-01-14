@@ -83,7 +83,7 @@ html {
   display: none;
 }
 .header .header__burger:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 @media screen and (max-width: 750px) {
   .header .header__burger {
@@ -92,7 +92,7 @@ html {
 }
 .header > b {
   font-size: 0.875rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 .header > b:hover {
   transform: scale(1.1);
@@ -100,12 +100,12 @@ html {
 .header > b a:hover {
   color: rgb(168.6291208791, 221.9587912088, 235.8708791209);
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .header > b a {
     font-size: 0.75rem;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .header > b {
     text-align: center;
   }
@@ -140,7 +140,7 @@ html {
 }
 .main .form {
   width: 100%;
-  padding: 2% 12%;
+  padding: 3% 12%;
   background-color: #091E3F;
   box-sizing: border-box;
   display: grid;
@@ -150,15 +150,15 @@ html {
 }
 @media screen and (max-width: 750px) {
   .main .form {
-    padding: 1% 6%;
+    padding: 3% 6%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 20px;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .form {
-    padding: 2% 8%;
+    padding: 3% 8%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 30px;
@@ -171,7 +171,7 @@ html {
   font-size: 1.25rem;
   gap: 70px;
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .form .form__structure {
     padding: 40px 12px;
   }
@@ -194,9 +194,10 @@ html {
   padding: 30px 60px;
 }
 .main .form .form__structure fieldset .form__inputs {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "etiqueta campo" "error error";
   margin-bottom: 16px;
 }
 @media screen and (max-width: 750px) {
@@ -205,6 +206,7 @@ html {
   }
 }
 .main .form .form__structure fieldset .form__inputs label {
+  grid-area: etiqueta;
   width: 280px;
   font-size: 1.375rem;
   font-weight: bold;
@@ -216,6 +218,7 @@ html {
   }
 }
 .main .form .form__structure fieldset .form__inputs input, .main .form .form__structure fieldset .form__inputs select {
+  grid-area: campo;
   flex-grow: 1;
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -232,7 +235,7 @@ html {
 .main .form .form__structure fieldset .form__inputs input[type=submit] {
   font-size: 1.5rem;
   font-weight: 700;
-  transition: background-color 0.4s ease-in-out, background-color 0.3s ease;
+  transition: background-color 0.4s ease-in-out, background-color 0.5s ease;
 }
 .main .form .form__structure fieldset .form__inputs input[type=submit]:hover {
   border: 3px solid #FFFFFF;
@@ -245,6 +248,19 @@ html {
   justify-content: none;
   align-items: center;
   padding-top: 40px;
+}
+.main .form .form__structure.was-validated input:invalid,
+.main .form .form__structure.was-validated select:invalid {
+  border: 3px solid #dc3545;
+}
+.main .form .form__structure.was-validated input:valid,
+.main .form .form__structure.was-validated select:valid {
+  border: 3px solid #28a745;
+}
+.main .form .form__structure.was-validated input:invalid ~ .invalid-feedback,
+.main .form .form__structure.was-validated select:invalid ~ .invalid-feedback {
+  display: block;
+  grid-area: error;
 }
 .main .form .form__decoration {
   padding: 2% 12%;
@@ -261,7 +277,7 @@ html {
     display: none;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .form .form__decoration {
     display: none;
   }
@@ -280,7 +296,7 @@ html {
 @media screen and (max-width: 750px) {
   .main .status {
     background: #6AC6DE;
-    padding: 2% 5%;
+    padding: 2% 4%;
     gap: 1%;
   }
 }
@@ -373,7 +389,7 @@ html {
     font-size: 0.75rem;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .guides .guides__table .guides__thead tr th strong {
     font-size: 1rem;
   }
@@ -397,7 +413,7 @@ html {
     font-size: 0.75rem;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .guides .guides__table .guides__tbody .guides__row td {
     font-size: 1rem;
   }
@@ -433,7 +449,7 @@ html {
   border: 2px solid #000000;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 .main .guides .guides__table .guides__tbody .guides__row .guides__buttons > button img {
   width: 20px;
@@ -446,7 +462,7 @@ html {
     display: block;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .guides .guides__table .guides__tbody .guides__row .guides__buttons > button img {
     display: block;
   }
@@ -463,7 +479,7 @@ html {
     display: none;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .guides .guides__table .guides__tbody .guides__row .guides__buttons > button p {
     display: none;
   }
@@ -493,7 +509,7 @@ html {
     gap: 2px;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 750px) {
+@media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .guides .guides__table .guides__tbody .guides__row .guides__buttons {
     display: flex;
     flex-direction: row;

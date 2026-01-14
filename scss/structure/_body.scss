@@ -68,13 +68,19 @@
                 border: none;
                 padding: 30px 60px;
                 .form__inputs{
-                    @include flexbox_row(null,center);
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-areas: 
+                        "etiqueta campo"
+                        "error error";
                     margin-bottom: 16px;
                     @include phone_adjustments{
                         margin-bottom: 8px;
                     }
 
                     label{
+                        grid-area: etiqueta;
                         width: 280px;
                         font-size: px-to-rem(22);
                         font-weight: bold;
@@ -84,6 +90,7 @@
                         }
                     }
                     input, select{
+                        grid-area: campo;
                         flex-grow: 1;
                         font-size: px-to-rem(18);
                         text-transform: uppercase;
@@ -94,7 +101,10 @@
                         @include phone_adjustments{
                             font-size: px-to-rem(16);
                         }
+
+                        
                     }
+                    
                     input[type="submit"]{
                         font-size: px-to-rem(24);
                         font-weight: 700;
@@ -112,11 +122,29 @@
                         padding-top: 40px;
                             
                     }
-
                 }
+                
+
 
             }
         }
+        .form__structure.was-validated input:invalid,
+        .form__structure.was-validated select:invalid {
+            border: 3px solid $wrongColor;
+        }
+
+        .form__structure.was-validated input:valid,
+        .form__structure.was-validated select:valid {
+            border: 3px solid $validColor;
+        }
+
+        .form__structure.was-validated input:invalid ~ .invalid-feedback,
+        .form__structure.was-validated select:invalid ~ .invalid-feedback {
+            display: block;
+            grid-area: error;
+        }
+
+
         .form__decoration{
             padding: 2% 12%;
             @include flexbox_row(center,center);
