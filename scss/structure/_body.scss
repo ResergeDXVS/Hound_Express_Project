@@ -36,13 +36,15 @@
         grid-template-rows: auto;
         gap: 40px;
         @include phone_adjustments{
-            padding: 3% 6%;
+            width: 100%;
+            padding: 4%;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             gap: 20px;
         }
         @include media_adjustments{
-            padding: 3% 8%;
+            width: 100%;
+            padding: 1% 2%;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             gap: 30px;
@@ -58,7 +60,7 @@
                 padding: 40px 12px;
             }
             @include phone_adjustments{
-                padding: 20px 6px;
+                padding: 2px 6px;
             }
             h2{
                 @extend %h2_blue_style;
@@ -70,6 +72,12 @@
             fieldset{
                 border: none;
                 padding: 30px 60px;
+                @include media_adjustments{
+                    padding: 15px 30px;
+                }
+                @include phone_adjustments{
+                    padding: 6px 14px;
+                }
                 .form__inputs{
                     display: grid;
                     grid-template-columns: 1fr 1fr;
@@ -79,7 +87,13 @@
                         "error error";
                     margin-bottom: 16px;
                     @include phone_adjustments{
-                        margin-bottom: 8px;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: repeat(3,1fr);
+                        grid-template-areas: 
+                            "etiqueta"
+                            "campo"
+                            "error";
+                        margin-bottom:8px;
                     }
 
                     label{
@@ -122,7 +136,7 @@
 
                     &:last-child {
                         @include flexbox_column(none,center);
-                        padding-top: 40px;
+                        padding-top: 2%;
                             
                     }
                 }

@@ -153,7 +153,8 @@ html {
 }
 @media screen and (max-width: 750px) {
   .main .form {
-    padding: 3% 6%;
+    width: 100%;
+    padding: 4%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 20px;
@@ -161,7 +162,8 @@ html {
 }
 @media screen and (max-width: 1250px) and (min-width: 750px) {
   .main .form {
-    padding: 3% 8%;
+    width: 100%;
+    padding: 1% 2%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 30px;
@@ -181,7 +183,7 @@ html {
 }
 @media screen and (max-width: 750px) {
   .main .form .form__structure {
-    padding: 20px 6px;
+    padding: 2px 6px;
   }
 }
 .main .form .form__structure h2 {
@@ -196,6 +198,16 @@ html {
   border: none;
   padding: 30px 60px;
 }
+@media screen and (max-width: 1250px) and (min-width: 750px) {
+  .main .form .form__structure fieldset {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main .form .form__structure fieldset {
+    padding: 6px 14px;
+  }
+}
 .main .form .form__structure fieldset .form__inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -205,6 +217,9 @@ html {
 }
 @media screen and (max-width: 750px) {
   .main .form .form__structure fieldset .form__inputs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "etiqueta" "campo" "error";
     margin-bottom: 8px;
   }
 }
@@ -250,7 +265,7 @@ html {
   flex-direction: column;
   justify-content: none;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 2%;
 }
 .main .form .form__structure.was-validated input:invalid,
 .main .form .form__structure.was-validated select:invalid {
@@ -664,30 +679,16 @@ body.body--wait {
 @media screen and (max-width: 1250px) and (min-width: 750px) {
   .historical {
     width: 60%;
-    height: 60%;
   }
 }
 @media screen and (max-width: 750px) {
   .historical {
     width: 75%;
-    height: 75%;
   }
 }
 .historical.historical--show {
   transform: translate(-50%, -50%);
   opacity: 1;
-}
-@media screen and (max-width: 1250px) and (min-width: 750px) {
-  .historical.historical--show {
-    width: 60%;
-    height: 60%;
-  }
-}
-@media screen and (max-width: 750px) {
-  .historical.historical--show {
-    width: 75%;
-    height: 75%;
-  }
 }
 .historical .historical__top {
   display: flex;
@@ -705,27 +706,17 @@ body.body--wait {
   line-height: 1;
   margin: 0;
 }
-@media screen and (max-width: 1250px) and (min-width: 750px) {
-  .historical .historical__top .historical__title {
-    font-size: 1.75rem;
-  }
-}
 @media screen and (max-width: 750px) {
   .historical .historical__top .historical__title {
-    font-size: 2rem;
+    font-size: 1.625rem;
   }
 }
 .historical .historical__top .historical__title b {
   font-size: 1.5rem;
 }
-@media screen and (max-width: 1250px) and (min-width: 750px) {
-  .historical .historical__top .historical__title b {
-    font-size: 1.75rem;
-  }
-}
 @media screen and (max-width: 750px) {
   .historical .historical__top .historical__title b {
-    font-size: 2rem;
+    font-size: 1.625rem;
   }
 }
 .historical .historical__top > i {
@@ -768,17 +759,7 @@ body.body--wait {
   padding: 0.3rem;
 }
 .historical .historical__table thead tr th strong {
-  font-size: 1.25rem;
-}
-@media screen and (max-width: 750px) {
-  .historical .historical__table thead tr th strong {
-    font-size: 0.75rem;
-  }
-}
-@media screen and (max-width: 1250px) and (min-width: 750px) {
-  .historical .historical__table thead tr th strong {
-    font-size: 1rem;
-  }
+  font-size: 1.125rem;
 }
 @media screen and (max-width: 750px) {
   .historical .historical__table thead tr th {
@@ -791,16 +772,6 @@ body.body--wait {
   }
 }
 .historical .historical__table tbody tr td {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
-}
-@media screen and (max-width: 750px) {
-  .historical .historical__table tbody tr td {
-    font-size: 0.75rem;
-  }
-}
-@media screen and (max-width: 1250px) and (min-width: 750px) {
-  .historical .historical__table tbody tr td {
-    font-size: 1rem;
-  }
 }/*# sourceMappingURL=main.css.map */
