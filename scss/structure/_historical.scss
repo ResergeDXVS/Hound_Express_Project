@@ -1,0 +1,142 @@
+body{
+    &.body--wait{
+        overflow: hidden;
+    }
+}
+.historical{
+    width: 50%;
+    height: auto;
+    background-color: $mainColorNavy;
+    padding: 2.5rem 1.5rem;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 2px 2px $secondaryColorBlue;
+    transition: $transition_move;
+    transform: translate(-50%, 100%);
+    opacity: 0; 
+
+    @include media_adjustments{
+        width: 60%;
+        height: 60%;
+    }
+    @include phone_adjustments{
+        width: 75%;
+        height: 75%;
+    }
+
+    &.historical--show{
+        transform: translate(-50%, -50%);
+        opacity: 1; 
+        @include media_adjustments{
+            width: 60%;
+            height: 60%;
+        }
+        @include phone_adjustments{
+            width: 75%;
+            height: 75%;
+        }
+    }
+    .historical__top{
+        @include flexbox_row(space-between,center);
+        padding: 3% 2%;
+        height: 15%;
+        .historical__title{
+            width: 100%;
+            @extend %h1_blue_style;
+            text-align: center;
+            font-size: px-to-rem(24);
+            box-sizing: border-box;
+            line-height: 1;
+            margin: 0;
+            @include media_adjustments{
+                font-size: px-to-rem(28);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(32);
+            }
+            b{
+                font-size: px-to-rem(24);
+                @include media_adjustments{
+                    font-size: px-to-rem(28);
+                }
+                @include phone_adjustments{
+                    font-size: px-to-rem(32);
+                }
+            }
+        }   
+        >i{
+            font-size: px-to-rem(28);
+            color: $secondaryColorBlue;
+            line-height: 1;
+            margin: 0;
+            @include media_adjustments{
+                font-size: px-to-rem(34);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(40);
+            }
+        }
+        #cross__historical{
+            cursor: pointer;
+            transition: $transition_ease;
+            &:hover{
+                filter: brightness(115%);
+                transform: scale(1.25);
+            }
+        }
+
+    }
+    .historical__table{
+        padding:2%;
+        width: 100%;
+        table-layout: fixed;
+        background-color: $whiteColor;
+        border-collapse: collapse;
+        height: auto;
+        thead{
+            tr{
+                @extend %format__tr__table;
+                th{
+                    color:$mainColorNavy;
+                    background-color: $whiteColor;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 0.3rem;
+                    strong{
+                        font-size: px-to-rem(20);
+                        @include phone_adjustments{
+                            font-size: px-to-rem(12);
+                        }
+                        @include media_adjustments{
+                            font-size: px-to-rem(16);
+                        }
+                    }
+                    @include phone_adjustments{
+                        height: 3rem;
+                    }
+                }
+                @include phone_adjustments{
+                    height: 3rem;
+                }
+            }
+        }
+        tbody{
+            tr{
+                @extend %format__tr__table;
+                td{
+                    font-size: px-to-rem(20);
+                    font-weight: 500;
+                    @include phone_adjustments{
+                        font-size: px-to-rem(12);
+                    }
+                    @include media_adjustments{
+                        font-size: px-to-rem(16);
+                    }
+                }
+            }
+        }
+        
+    }
+}

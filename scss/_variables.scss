@@ -1,6 +1,6 @@
 $mainColorNavy: #091E3F;
 $secondaryColorBlue: #6AC6DE;
-$whiteColor: #FFFFFF;
+$whiteColor: #eaecff;
 $blackColor: #000000;
 
 $validColor: #28a745;
@@ -9,6 +9,8 @@ $wrongColor: #dc3545;
 $fontFamily: "Open Sans", Arial, Helvetica, sans-serif;
 
 $transition_ease: background-color 0.5s ease;
+$transition_move: transform 0.5s ease, opacity 0.5s ease;
+
 
 %link_white_style{
     text-decoration: none;
@@ -58,9 +60,9 @@ $transition_ease: background-color 0.5s ease;
 }
 
 %format__tr__table{
-    height: 5rem;
+    height: 100%;
     text-align: center;
     vertical-align: middle;
-    padding: 0.3rem;
+    padding: 1rem;
     font-size: px-to-rem(20);
 }

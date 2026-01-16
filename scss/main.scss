@@ -1,5 +1,6 @@
-@import "./_variables.scss";
-@import "./_mixins.scss";
-@import "./structure/_header.scss";
-@import "./structure/_body.scss";
-@import "./structure/_footer.scss";
+@import "./variables";
+@import "./mixins";
+@import "./structure/header";
+@import "./structure/body";
+@import "./structure/footer";
+@import "./structure/historical"

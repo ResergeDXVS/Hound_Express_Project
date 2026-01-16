@@ -1,5 +1,8 @@
 .main{
+    &.main--wait{
+        filter: brightness(0.5);
 
+    }
     .main__banner{
         width: 100%;
         padding: 80px 20px;
@@ -252,7 +255,7 @@
                                 font-size: px-to-rem(12);
                             }
                             @include media_adjustments{
-                                font-size: px-to-rem(16);
+                                font-size: px-to-rem(14);
                             }
                         }
                         @include phone_adjustments{
@@ -270,11 +273,12 @@
                     td{
                         font-size: px-to-rem(20);
                         font-weight: 500;
+                        
                         @include phone_adjustments{
                             font-size: px-to-rem(12);
                         }
                         @include media_adjustments{
-                            font-size: px-to-rem(16);
+                            font-size: px-to-rem(14);
                         }
                     }
                     &:nth-child(2n-1){
@@ -287,17 +291,17 @@
                     }
                     .guides__buttons{
                         @include flexbox_column(center,center);
-                        padding: 6px 20px;
+                        padding: 12px;
                         width: 100%;
-                        box-sizing: border-box;
-                        flex:1;
+                        height: 100%;
                         gap:4px;
                         >button{
-                            @include flexbox_row(space-evenly,center);
+                            @include flexbox_row(center,center);
                             background-color: $mainColorNavy;
                             color:$whiteColor;
                             width: 100%;
-                            padding: 12px;
+                            height: 100%;
+                            padding: 8px;
                             border: 2px solid $blackColor;
                             border-radius: 8px;
                             cursor: pointer;
@@ -317,6 +321,8 @@
                             }
                             p{
                                 font-size: px-to-rem(16);
+                                line-height: 1;
+                                margin:0;
                                 font-weight: bolder;
                                 &:hover{
                                     color:$mainColorNavy;
@@ -340,12 +346,10 @@
                             }
                         }
                         @include phone_adjustments{
-                            @include flexbox_row(none,stretch);
-                            padding: 4px 10px;
-                            gap:2px;
+                            @include flexbox_row(center,center);
                         }
                         @include media_adjustments{
-                            @include flexbox_row(none,stretch);
+                            @include flexbox_row(center,center);
                         }
                     }
                     @include phone_adjustments{
